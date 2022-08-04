@@ -13,6 +13,8 @@
 		8F79780E289BFC0A00C202E4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F79780C289BFC0A00C202E4 /* Main.storyboard */; };
 		8F797810289BFC0E00C202E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8F79780F289BFC0E00C202E4 /* Assets.xcassets */; };
 		8F797813289BFC0E00C202E4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8F797811289BFC0E00C202E4 /* LaunchScreen.storyboard */; };
+		8F79781B289BFE5700C202E4 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79781A289BFE5700C202E4 /* APICaller.swift */; };
+		8F79781D289C0C5200C202E4 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8F79781C289C0C5200C202E4 /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		8F79780F289BFC0E00C202E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8F797812289BFC0E00C202E4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8F797814289BFC0E00C202E4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		8F79781A289BFE5700C202E4 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
+		8F79781C289C0C5200C202E4 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				8F79780F289BFC0E00C202E4 /* Assets.xcassets */,
 				8F797811289BFC0E00C202E4 /* LaunchScreen.storyboard */,
 				8F797814289BFC0E00C202E4 /* Info.plist */,
+				8F79781A289BFE5700C202E4 /* APICaller.swift */,
+				8F79781C289C0C5200C202E4 /* NewsTableViewCell.swift */,
 			);
 			path = newsSwiftApp;
 			sourceTree = "<group>";
@@ -140,7 +146,9 @@
 			files = (
 				8F79780B289BFC0A00C202E4 /* ViewController.swift in Sources */,
 				8F797807289BFC0A00C202E4 /* AppDelegate.swift in Sources */,
+				8F79781D289C0C5200C202E4 /* NewsTableViewCell.swift in Sources */,
 				8F797809289BFC0A00C202E4 /* SceneDelegate.swift in Sources */,
+				8F79781B289BFE5700C202E4 /* APICaller.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

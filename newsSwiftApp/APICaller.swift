@@ -12,6 +12,8 @@ final class APICaller {
     
     struct Constants {
         static let topHeadlinesURL = URL(string: "https://newsapi.org/v2/top-headlines?country=US&apiKey=e86735567ef942ad86ff92c752517037")
+        static let searchURLString =
+            "https://newsapi.org/v2/everything?sortedBy=popularity&apiKey=e86735567ef942ad86ff92c752517037&q="
     }
     
     private init() {
@@ -20,6 +22,35 @@ final class APICaller {
     
     public func getTopStories(completion: @escaping(Result<[Article], Error>) -> Void) {
         guard let url = Constants.topHeadlinesURL else {
+            return
+        }
+        
+        let task = URLSession.shared.dataTask(with: url) {data, _,error in
+            if let error = error {
+                completion(.failure(error))
+            }
+            else if let data = data {
+                do {
+                    let result = try JSONDecoder().decode(APIResponse.self, from: data)
+                    
+                    print("Articles: \(result.articles.count)")
+                    completion(.success(result.articles))
+                }
+                catch {
+                    completion(.failure(error))
+                }
+            }
+        }
+        
+        task.resume()
+    }
+    
+    public func search(with query: String, completion: @escaping(Result<[Article], Error>) -> Void) {
+        guard !query.trimmingCharacters(in: .whitespaces).isEmpty else {
+            return
+        }
+        let urlString = Constants.searchURLString + query
+        guard let url = URL(string: urlString) else {
             return
         }
         
